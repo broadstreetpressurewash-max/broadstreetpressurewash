@@ -1,0 +1,47 @@
+# Broad Street Pressure Wash - robots.txt
+# Production domain: https://broadstreetpressurewash.com/
+
+User-agent: *
+Allow: /
+
+# AI crawlers (Generative Engine Optimization)
+# Explicitly allow major LLM training/citation crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Slow down aggressive SEO crawlers
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: DotBot
+Crawl-delay: 10
+
+# Sitemap
+Sitemap: https://broadstreetpressurewash.com/sitemap.xml

@@ -1,0 +1,581 @@
+:root{
+  --bg-dark: #0d1218;
+  --nav-black: #050505;
+  --white: #ffffff;
+  --soft-white: #f5f5f5;
+  --blue-gray: #9ba9c0;
+  --navy: #1f3766;
+  --gold: #e29a33;
+  --gold-soft: #d6d49e;
+  --text-dark: #142846;
+  --panel-dark: rgba(10, 15, 22, 0.88);
+  --panel-light: rgba(255,255,255,0.94);
+  --border-light: rgba(255,255,255,0.16);
+  --max-width: 1400px;
+  --shadow: 0 18px 40px rgba(0,0,0,0.22);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-dark);
+  background: #ffffff;
+  line-height: 1.45;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.container{
+  width: min(92%, var(--max-width));
+  margin: 0 auto;
+}
+
+
+
+/* HERO */
+.quote-hero{
+  position: relative;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.70)),
+    url("/images/optimized/garage-door-house-washing-charleston-sc-hero-1600.jpg") center center / cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.70)),
+    image-set(url("/images/optimized/garage-door-house-washing-charleston-sc-hero-1600.avif") type("image/avif"), url("/images/optimized/garage-door-house-washing-charleston-sc-hero-1600.jpg") type("image/jpeg")) center center / cover no-repeat;
+  overflow: hidden;
+}
+@media (max-width: 768px){
+/* HERO */
+.quote-hero{
+  background: linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.70)),
+    image-set(url("/images/optimized/garage-door-house-washing-charleston-sc-hero-960.avif") type("image/avif"), url("/images/optimized/garage-door-house-washing-charleston-sc-hero-1600.jpg") type("image/jpeg")) center center / cover no-repeat;
+}
+}
+
+.hero-overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(8,13,20,0.14);
+}
+
+.hero-inner{
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--white);
+  padding: 88px 0 80px;
+  max-width: 980px;
+}
+
+.hero-kicker{
+  color: rgba(255,255,255,0.88);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.quote-hero h1{
+  font-size: clamp(2.4rem, 5vw, 4.6rem);
+  line-height: 0.98;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  margin-bottom: 18px;
+}
+
+.hero-subtext{
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: rgba(255,255,255,0.92);
+}
+
+/* QUOTE SECTION */
+.quote-section{
+  background: linear-gradient(rgba(244,244,244,0.96), rgba(244,244,244,0.96)),
+    url("/images/optimized/window-cleaning-charleston-sc-after-hero-1600.jpg") center center / cover no-repeat;
+  background: linear-gradient(rgba(244,244,244,0.96), rgba(244,244,244,0.96)),
+    image-set(url("/images/optimized/window-cleaning-charleston-sc-after-hero-1600.avif") type("image/avif"), url("/images/optimized/window-cleaning-charleston-sc-after-hero-1600.jpg") type("image/jpeg")) center center / cover no-repeat;
+  padding: 78px 0 92px;
+}
+@media (max-width: 768px){
+/* QUOTE SECTION */
+.quote-section{
+  background: linear-gradient(rgba(244,244,244,0.96), rgba(244,244,244,0.96)),
+    image-set(url("/images/optimized/window-cleaning-charleston-sc-after-hero-960.avif") type("image/avif"), url("/images/optimized/window-cleaning-charleston-sc-after-hero-1600.jpg") type("image/jpeg")) center center / cover no-repeat;
+}
+}
+
+.quote-grid{
+  display: grid;
+  grid-template-columns: 1.45fr 0.9fr;
+  gap: 34px;
+  align-items: start;
+}
+
+.quote-form-card,
+.quote-info-card{
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.quote-form-card{
+  background: var(--panel-light);
+  padding: 34px 34px 36px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-topline{
+  width: 92px;
+  height: 5px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--gold), var(--blue-gray));
+  margin-bottom: 20px;
+}
+
+.quote-form-card h2,
+.quote-info-card h2{
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  margin-bottom: 12px;
+  color: #0d1622;
+}
+
+.card-intro{
+  color: #43546e;
+  font-size: 1rem;
+  margin-bottom: 26px;
+}
+
+.quote-form{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-row{
+  display: grid;
+  gap: 18px;
+}
+
+.two-col{
+  grid-template-columns: 1fr 1fr;
+}
+
+.field-group{
+  display: flex;
+  flex-direction: column;
+}
+
+.field-group label{
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #1b2f4f;
+  margin-bottom: 8px;
+}
+
+.field-group input,
+.field-group select,
+.field-group textarea{
+  width: 100%;
+  border: 1px solid rgba(20,40,70,0.14);
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 15px 16px;
+  font-size: 0.98rem;
+  font-family: inherit;
+  color: #132846;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  outline: none;
+}
+
+.field-group textarea{
+  resize: vertical;
+  min-height: 150px;
+}
+
+.field-group input:focus,
+.field-group select:focus,
+.field-group textarea:focus{
+  border-color: rgba(226,154,51,0.6);
+  box-shadow: 0 0 0 4px rgba(226,154,51,0.12);
+}
+
+.hidden-field{
+  display: none;
+}
+
+.submit-btn{
+  position: relative;
+  overflow: hidden;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--blue-gray), #a9b6cc);
+  color: var(--white);
+  min-height: 68px;
+  padding: 16px 26px;
+  font-size: 1.12rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
+  box-shadow: 0 14px 28px rgba(27, 45, 79, 0.18);
+}
+
+.submit-btn::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,0.22) 50%, transparent 80%);
+  transform: translateX(-120%);
+  transition: transform 0.55s ease;
+}
+
+.submit-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 20px 36px rgba(27, 45, 79, 0.24);
+  filter: brightness(1.03);
+}
+
+.submit-btn:hover::before{
+  transform: translateX(120%);
+}
+
+.submit-btn:active{
+  transform: translateY(0);
+}
+
+.submit-btn span{
+  position: relative;
+  z-index: 2;
+}
+
+/* SIDE PANEL */
+.quote-info-card{
+  background: linear-gradient(rgba(8,13,20,0.86), rgba(8,13,20,0.86)),
+    url("/images/optimized/water-splash-background-hero-1600.jpg") center center / cover no-repeat;
+  background: linear-gradient(rgba(8,13,20,0.86), rgba(8,13,20,0.86)),
+    image-set(url("/images/optimized/water-splash-background-hero-1600.avif") type("image/avif"), url("/images/optimized/water-splash-background-hero-1600.jpg") type("image/jpeg")) center center / cover no-repeat;
+  color: var(--white);
+}
+@media (max-width: 768px){
+/* SIDE PANEL */
+.quote-info-card{
+  background: linear-gradient(rgba(8,13,20,0.86), rgba(8,13,20,0.86)),
+    image-set(url("/images/optimized/water-splash-background-hero-960.avif") type("image/avif"), url("/images/optimized/water-splash-background-hero-1600.jpg") type("image/jpeg")) center center / cover no-repeat;
+}
+}
+
+.info-panel{
+  padding: 34px 30px 34px;
+}
+
+.info-panel h2{
+  color: var(--white);
+}
+
+.info-text{
+  color: rgba(255,255,255,0.82);
+  margin-bottom: 28px;
+  font-size: 1rem;
+}
+
+.info-block{
+  padding: 16px 0;
+  border-top: 1px solid rgba(255,255,255,0.10);
+}
+
+.info-block:first-of-type{
+  border-top: none;
+  padding-top: 8px;
+}
+
+.info-block h3{
+  color: var(--gold);
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 6px;
+  letter-spacing: 0.02em;
+}
+
+.info-block p,
+.info-block a{
+  color: rgba(255,255,255,0.96);
+  font-size: 1rem;
+}
+
+.info-highlight{
+  margin-top: 24px;
+  padding: 18px 18px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.info-highlight strong{
+  display: block;
+  color: var(--gold-soft);
+  margin-bottom: 8px;
+  font-size: 0.96rem;
+}
+
+.info-highlight span{
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+}
+
+.info-buttons{
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.side-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+  min-height: 52px;
+  padding: 12px 20px;
+  border-radius: 14px;
+  background: var(--blue-gray);
+  color: var(--white);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.94rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.side-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 26px rgba(0,0,0,0.2);
+}
+
+.side-btn-outline{
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.22);
+}
+
+/* FOOTER CONTACT STRIP */
+.contact-strip{
+  background: #f2f2f2;
+  padding: 46px 0;
+}
+
+.contact-strip-grid{
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1.35fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.contact-logo-block img{
+  width: 310px;
+}
+
+.contact-block h3{
+  color: var(--gold);
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.contact-block p,
+.contact-block a{
+  color: #0b0f14;
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+/* SOCIAL */
+.social-section{
+  position: relative;
+  background: linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)),
+    url("/images/optimized/water-splash-background-hero-1600.jpg") center center / cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)),
+    image-set(url("/images/optimized/water-splash-background-hero-1600.avif") type("image/avif"), url("/images/optimized/water-splash-background-hero-1600.jpg") type("image/jpeg")) center center / cover no-repeat;
+  padding: 54px 0 46px;
+}
+@media (max-width: 768px){
+/* SOCIAL */
+.social-section{
+  background: linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)),
+    image-set(url("/images/optimized/water-splash-background-hero-960.avif") type("image/avif"), url("/images/optimized/water-splash-background-hero-1600.jpg") type("image/jpeg")) center center / cover no-repeat;
+}
+}
+
+.dark-overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.08);
+}
+
+.social-content{
+  position: relative;
+  z-index: 2;
+  color: var(--white);
+}
+
+.social-content h2{
+  text-align: center;
+  font-size: clamp(1.9rem, 3vw, 3.1rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.social-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  flex-wrap: wrap;
+}
+
+.social-icon{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-soft);
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.social-handle{
+  color: var(--white);
+  font-size: clamp(1.7rem, 2.9vw, 2.9rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+}
+
+/* REVEAL */
+.reveal-on-scroll{
+  opacity: 0;
+  transform: translateY(-12px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px){
+  .quote-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .contact-strip-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 980px){
+  .nav-toggle{
+    display: block;
+  }
+
+  .main-nav{
+    position: absolute;
+    top: 56px;
+    right: 0;
+    width: min(320px, 88vw);
+    background: #0a0a0a;
+    padding: 18px 22px 24px;
+    display: none;
+    border-left: 1px solid rgba(255,255,255,0.07);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .main-nav.open{
+    display: block;
+  }
+
+  .main-nav ul{
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .two-col{
+    grid-template-columns: 1fr;
+  }
+
+  .contact-strip-grid{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contact-logo-block img{
+    margin: 0 auto;
+  }
+
+  .social-row{
+    flex-direction: column;
+  }
+
+  .brand-name{
+    max-width: 74%;
+    white-space: normal;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 640px){
+  .quote-hero{
+    min-height: 300px;
+  }
+
+  .hero-inner{
+    padding: 72px 0 68px;
+  }
+
+  .quote-form-card,
+  .info-panel{
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .social-icon{
+    font-size: 4.1rem;
+  }
+
+  .social-handle{
+    font-size: 1.35rem;
+    text-align: center;
+    word-break: break-word;
+  }
+
+  .submit-btn,
+  .side-btn{
+    width: 100%;
+  }
+}
